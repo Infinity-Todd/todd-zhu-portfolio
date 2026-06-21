@@ -46,3 +46,43 @@ document.querySelectorAll("[data-placeholder]").forEach((link) => link.addEventL
 }));
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+document.querySelectorAll(".switcher-tabs button").forEach((button) => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".switcher-tabs button").forEach((tab) => {
+      const selected = tab === button;
+      tab.classList.toggle("active", selected);
+      tab.setAttribute("aria-selected", String(selected));
+    });
+    document.querySelectorAll(".switch-panel").forEach((panel) => {
+      panel.classList.toggle("active", panel.dataset.content === button.dataset.panel);
+    });
+  });
+});
+
+document.querySelectorAll(".experience-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    const willOpen = !item.classList.contains("open");
+    document.querySelectorAll(".experience-item").forEach((row) => {
+      row.classList.remove("open");
+      row.setAttribute("aria-expanded", "false");
+      row.querySelector(":scope > b").textContent = "+";
+    });
+    if (willOpen) {
+      item.classList.add("open");
+      item.setAttribute("aria-expanded", "true");
+      item.querySelector(":scope > b").textContent = "−";
+    }
+  });
+});
+
+const aboutHero = document.querySelector(".about-hero");
+if (aboutHero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  aboutHero.addEventListener("pointermove", (event) => {
+    const rect = aboutHero.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    aboutHero.style.setProperty("--pointer-x", `${x * 12}px`);
+    aboutHero.style.setProperty("--pointer-y", `${y * 12}px`);
+  });
+}

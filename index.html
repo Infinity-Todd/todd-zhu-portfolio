@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=5" />
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=6" />
+    <script src="app.js?v=2" defer></script>
   </head>
   <body>
     <header>
@@ -19,66 +19,99 @@
       </a>
       <button class="menu" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
       <nav>
-        <a href="#about">About</a>
+        <a href="#top">About Me</a>
         <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
         <a href="#notes">Notes</a>
-        <a href="#publications">Publications</a>
         <a class="nav-button" href="#contact">Connect ↗</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero wrap">
-        <div class="hero-copy reveal">
-          <p class="kicker"><span></span> UC SAN DIEGO · CLASS OF 2028</p>
-          <h1>Finding structure<br />in <em>complexity.</em></h1>
-          <p class="intro">
-            Hi, I'm <strong>Todd Zhu</strong> — a sophomore exploring the intersection of
-            <a href="#projects">data science</a>, applied mathematics, and computer science.
-          </p>
-          <div class="actions">
-            <a class="primary" href="#projects">Explore my work <span>↓</span></a>
-            <a class="secondary" href="resume.pdf" target="_blank" rel="noopener">Download résumé ↗</a>
+      <section class="about-hero wrap" id="about">
+        <aside class="profile-rail reveal">
+          <div class="profile-photo">
+            <img src="assets/todd-avatar.jpg" alt="Todd Zhu overlooking the mountains" />
+            <span class="profile-status" aria-label="Open to research opportunities"></span>
           </div>
-        </div>
+          <blockquote>
+            “The important thing is not to stop questioning.”
+            <cite>— Albert Einstein</cite>
+          </blockquote>
+          <div class="profile-links">
+            <a href="mailto:chz111@ucsd.edu"><span>↗</span> UCSD Email</a>
+            <a href="resume.pdf" target="_blank" rel="noopener"><span>↗</span> Résumé / CV</a>
+            <a href="https://github.com/Infinity-Todd" target="_blank" rel="noopener"><span>↗</span> GitHub</a>
+            <span class="link-pending"><i>·</i> LinkedIn <small>soon</small></span>
+            <span class="link-pending"><i>·</i> Instagram <small>soon</small></span>
+          </div>
+        </aside>
 
-        <div class="hero-panel reveal">
-          <div class="orbit">
-            <div class="orbit-ring ring-one"></div>
-            <div class="orbit-ring ring-two"></div>
-            <div class="node node-data">DATA</div>
-            <div class="node node-math">MATH</div>
-            <div class="node node-code">CODE</div>
-            <div class="core">TZ</div>
+        <div class="about-story reveal">
+          <p class="kicker"><span></span> ABOUT ME · UC SAN DIEGO</p>
+          <h1>Hi, I'm Todd.<br />I build at the intersection of <em>data, math, and autonomy.</em></h1>
+          <p class="about-lead">
+            I'm a second-year student at UC San Diego pursuing a double major in
+            <strong>Data Science</strong> and <strong>Applied Mathematics</strong>.
+            I enjoy turning mathematical ideas into systems that can learn, move, and make decisions.
+          </p>
+          <p class="about-body">
+            My recent work spans humanoid reinforcement learning, motion-capture retargeting,
+            variational image processing, and queueing models. At Tongji University's State Key
+            Lab of AI Unmanned Systems, I worked with motion data and NVIDIA Isaac Sim; at UCSD,
+            I helped students connect linear algebra theory with MATLAB computation.
+          </p>
+
+          <div class="fact-row">
+            <div><strong>3.96</strong><span>GPA / 4.00</span></div>
+            <div><strong>2</strong><span>Majors</span></div>
+            <div><strong>5</strong><span>Languages coded</span></div>
           </div>
-          <div class="panel-status"><span></span> Open to research & collaboration</div>
+
+          <div class="about-switcher" data-active-panel="now">
+            <div class="switcher-tabs" role="tablist" aria-label="About Todd">
+              <button class="active" role="tab" aria-selected="true" data-panel="now">Right now</button>
+              <button role="tab" aria-selected="false" data-panel="journey">Journey</button>
+              <button role="tab" aria-selected="false" data-panel="tools">Toolbox</button>
+            </div>
+            <div class="switcher-content">
+              <div class="switch-panel active" data-content="now">
+                <span class="pulse"></span>
+                <p>Building a footstep-guided humanoid obstacle-avoidance policy with PPO and PyTorch.</p>
+              </div>
+              <div class="switch-panel" data-content="journey">
+                <p><b>2024</b> Started at UCSD → <b>2025</b> MATLAB Tutor + Autonomous Systems Research → <b>Now</b> exploring embodied AI.</p>
+              </div>
+              <div class="switch-panel" data-content="tools">
+                <p>Python · Java · SQL · R · MATLAB · PyTorch · TensorFlow · OpenCV · CVXPY · Isaac Sim</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="ticker">
         <div>
-          <span>DATA SCIENCE</span><b>✳</b><span>APPLIED MATHEMATICS</span><b>✳</b><span>COMPUTER SCIENCE</span><b>✳</b>
-          <span>DATA SCIENCE</span><b>✳</b><span>APPLIED MATHEMATICS</span><b>✳</b><span>COMPUTER SCIENCE</span><b>✳</b>
+          <span>EMBODIED AI</span><b>✳</b><span>REINFORCEMENT LEARNING</span><b>✳</b><span>APPLIED MATHEMATICS</span><b>✳</b>
+          <span>EMBODIED AI</span><b>✳</b><span>REINFORCEMENT LEARNING</span><b>✳</b><span>APPLIED MATHEMATICS</span><b>✳</b>
         </div>
       </section>
 
-      <section class="about wrap" id="about">
-        <div class="section-tag reveal">01 — ABOUT</div>
-        <div class="about-main reveal">
-          <h2>I use computation and mathematics to ask better questions about the world.</h2>
-          <div class="about-details">
-            <p>
-              I'm currently building a strong foundation in statistical modeling, algorithms,
-              machine learning, and mathematical reasoning at UC San Diego. This site is my
-              public lab notebook: a place for projects, technical notes, and research in progress.
-            </p>
-            <div class="focus-list">
-              <div><span>01</span><strong>Machine Learning</strong></div>
-              <div><span>02</span><strong>Statistical Modeling</strong></div>
-              <div><span>03</span><strong>Scientific Computing</strong></div>
-              <div><span>04</span><strong>Data Visualization</strong></div>
-            </div>
-          </div>
+      <section class="experience wrap" id="research">
+        <div class="section-tag reveal">01 — EXPERIENCE</div>
+        <div class="timeline reveal">
+          <button class="experience-item open" type="button" aria-expanded="true">
+            <span>2025</span><strong>Autonomous Systems Research Intern</strong><em>Tongji University</em><b>−</b>
+            <p>Processed and retargeted humanoid motion-capture data, integrated reference motions into NVIDIA Isaac Sim, and maintained reproducible Python pipelines.</p>
+          </button>
+          <button class="experience-item" type="button" aria-expanded="false">
+            <span>2025</span><strong>MATLAB Tutor · MATH 18</strong><em>UC San Diego</em><b>+</b>
+            <p>Helped students implement and interpret linear algebra computations, from row reduction and least squares to eigenvalues and eigenvectors.</p>
+          </button>
+          <button class="experience-item" type="button" aria-expanded="false">
+            <span>2024 — Present</span><strong>B.S. Data Science & Applied Mathematics</strong><em>UC San Diego</em><b>+</b>
+            <p>Coursework includes data structures and algorithms, linear algebra, probability, machine learning, and optimization.</p>
+          </button>
         </div>
       </section>
 
@@ -88,7 +121,7 @@
             <div class="section-tag">02 — PROJECTS</div>
             <h2>Selected experiments<br />& builds.</h2>
           </div>
-          <p>Projects can be filtered by subject. Replace these samples with links to your GitHub repositories.</p>
+          <p>Research and engineering projects grounded in reinforcement learning, mathematical modeling, and scientific computing.</p>
         </div>
 
         <div class="filters reveal" role="group" aria-label="Filter projects">
@@ -102,7 +135,7 @@
           <article class="project featured reveal" data-category="data">
             <a href="#" data-placeholder="Project repository">
               <div class="visual viz-bars">
-                <div class="chart-label">MODEL PERFORMANCE / 2026</div>
+                <div class="chart-label">PPO TRAINING SIGNALS / HUMANOID CONTROL</div>
                 <div class="bars">
                   <i style="--h:48%"><span>48</span></i><i style="--h:66%"><span>66</span></i>
                   <i style="--h:58%"><span>58</span></i><i style="--h:84%"><span>84</span></i>
@@ -111,7 +144,7 @@
                 <div class="axis"><span>Linear</span><span>Random Forest</span><span>XGBoost</span></div>
               </div>
               <div class="project-info">
-                <div><span class="type">DATA SCIENCE · PYTHON</span><h3>Campus Mobility Predictor</h3><p>Predicting campus shuttle demand from temporal and weather patterns.</p></div>
+                <div><span class="type">EMBODIED AI · PYTORCH · ISAAC SIM</span><h3>Footstep-Guided Humanoid Obstacle Avoidance</h3><p>An actor-critic PPO policy for continuous humanoid control with footstep-conditioned observations.</p></div>
                 <b>↗</b>
               </div>
             </a>
@@ -124,9 +157,9 @@
                   <path d="M0 175 C70 20 130 330 205 175 S340 20 415 175 S530 330 600 175" />
                   <path class="faint" d="M0 175 C110 80 135 270 250 175 S420 80 600 175" />
                 </svg>
-                <span>f(x) = Σ aₙ sin(nπx/L)</span>
+                <span>TV(u) + λ ‖u − f‖²</span>
               </div>
-              <div class="project-info"><div><span class="type">APPLIED MATH · NUMPY</span><h3>Fourier Series Explorer</h3><p>Interactive approximation of periodic functions.</p></div><b>↗</b></div>
+              <div class="project-info"><div><span class="type">APPLIED MATH · IMAGE PROCESSING</span><h3>Variational Image Denoising & Segmentation</h3><p>Quadratic and total-variation models solved with gradient and primal-dual methods.</p></div><b>↗</b></div>
             </a>
           </article>
 
@@ -137,9 +170,9 @@
                   <g class="edges"><path d="M80 250L210 100L330 230L470 80L530 260M210 100L470 80M80 250L330 230M330 230L470 80" /></g>
                   <g class="points"><circle cx="80" cy="250" r="13"/><circle cx="210" cy="100" r="13"/><circle cx="330" cy="230" r="13"/><circle cx="470" cy="80" r="13"/><circle cx="530" cy="260" r="13"/></g>
                 </svg>
-                <span>DIJKSTRA / O(E LOG V)</span>
+                <span>M/M/C · FCFS QUEUE</span>
               </div>
-              <div class="project-info"><div><span class="type">ALGORITHMS · C++</span><h3>Graph Algorithm Visualizer</h3><p>Making pathfinding algorithms visible and intuitive.</p></div><b>↗</b></div>
+              <div class="project-info"><div><span class="type">MODELING · MATLAB · QUEUEING</span><h3>Airport Taxi Decision Modeling</h3><p>Queueing, revenue modeling, simulation, and sensitivity analysis for dispatch strategies.</p></div><b>↗</b></div>
             </a>
           </article>
 
@@ -149,7 +182,7 @@
                 <div class="cluster c1"></div><div class="cluster c2"></div><div class="cluster c3"></div>
                 <span>K-MEANS / K = 3</span>
               </div>
-              <div class="project-info"><div><span class="type">ML · SCIKIT-LEARN</span><h3>Music Taste Clusters</h3><p>Exploring listening behavior through unsupervised learning.</p></div><b>↗</b></div>
+              <div class="project-info"><div><span class="type">ROBOTICS · MOTION DATA</span><h3>Motion Capture Retargeting Pipeline</h3><p>Joint mapping, time synchronization, filtering, and simulation replay for humanoid datasets.</p></div><b>↗</b></div>
             </a>
           </article>
         </div>
@@ -191,8 +224,8 @@
           <div class="socials">
             <a href="mailto:zhuchenyi050213@gmail.com">Personal email ↗</a>
             <a href="https://github.com/Infinity-Todd" target="_blank" rel="noopener">GitHub ↗</a>
-            <a href="#" data-placeholder="LinkedIn profile">LinkedIn ↗</a>
-            <a href="#" data-placeholder="Google Scholar profile">Google Scholar ↗</a>
+            <span>LinkedIn · soon</span>
+            <span>Instagram · soon</span>
           </div>
         </div>
       </section>
