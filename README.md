@@ -3,6 +3,8 @@
 A static academic portfolio designed for GitHub Pages. It includes project
 visualizations, filterable project categories, notes, publications, and contact links.
 
+Live site: https://infinity-todd.github.io/todd-zhu-portfolio/
+
 ## Contact
 
 - UC San Diego: chz111@ucsd.edu
