@@ -7,6 +7,7 @@ visualizations, filterable project categories, notes, publications, and contact 
 
 - UC San Diego: chz111@ucsd.edu
 - Personal: zhuchenyi050213@gmail.com
+- GitHub: https://github.com/Infinity-Todd
 - Résumé: `resume.pdf`
 
 ## Maintain the site
