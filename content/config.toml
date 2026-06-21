@@ -1,0 +1,63 @@
+[site]
+title = "Todd Zhu"
+description = "Academic website of Todd Zhu, a Data Science and Applied Mathematics student at UC San Diego."
+favicon = "/todd-zhu-portfolio/favicon.svg"
+last_updated = "June 21, 2026"
+
+[author]
+name = "Todd Zhu"
+title = "Data Science & Applied Mathematics"
+institution = "University of California, San Diego"
+avatar = "/todd-zhu-portfolio/bio.jpg"
+
+[social]
+email = "chz111@ucsd.edu"
+location = "La Jolla, California"
+location_details = ["University of California, San Diego", "La Jolla, CA"]
+github = "https://github.com/Infinity-Todd"
+
+[features]
+enable_likes = true
+enable_one_page_mode = false
+
+[i18n]
+enabled = false
+locales = ["en"]
+default_locale = "en"
+mode = "fixed"
+fixed_locale = "en"
+persist = false
+switcher = false
+
+[i18n.labels]
+en = "English"
+
+[[navigation]]
+title = "About"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "Research"
+type = "page"
+target = "research"
+href = "/research"
+
+[[navigation]]
+title = "Projects"
+type = "page"
+target = "projects"
+href = "/projects"
+
+[[navigation]]
+title = "Experience"
+type = "page"
+target = "experience"
+href = "/experience"
+
+[[navigation]]
+title = "CV"
+type = "page"
+target = "cv"
+href = "/cv"

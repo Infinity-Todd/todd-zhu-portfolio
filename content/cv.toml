@@ -1,0 +1,4 @@
+type = "text"
+title = "Curriculum Vitae"
+description = "A concise overview. You can also download the complete PDF résumé."
+source = "cv.md"

@@ -1,30 +1,49 @@
-# Todd Zhu — Personal Website
+# Todd Zhu Academic Portfolio
 
-A static academic portfolio designed for GitHub Pages. It includes project
-visualizations, filterable project categories, notes, publications, and contact links.
+Academic website for Todd Zhu, an undergraduate studying Data Science and
+Applied Mathematics at UC San Diego.
 
 Live site: https://infinity-todd.github.io/todd-zhu-portfolio/
 
-## Contact
+## Content maintenance
 
-- UC San Diego: chz111@ucsd.edu
-- Personal: zhuchenyi050213@gmail.com
-- GitHub: https://github.com/Infinity-Todd
-- Résumé: `resume.pdf`
+The site is configuration-driven:
 
-## Maintain the site
+- `content/config.toml` — identity, contact details, navigation, and features
+- `content/bio.md` — homepage biography
+- `content/research.toml` — research cards
+- `content/projects.toml` — project cards
+- `content/experience.toml` — research, teaching, and education
+- `content/cv.md` — web CV
+- `content/publications.bib` — future BibTeX publication records
+- `public/bio.jpg` — profile image
+- `public/resume.pdf` — downloadable résumé
 
-- Edit profile and section copy in `index.html`.
-- Replace every `href="#"` with the relevant GitHub, note, publication, résumé, or social URL.
-- Duplicate a `.project` or note row to add new content.
-- Visual styles live in `styles.css`; interaction lives in `app.js`.
+## Local development
 
-## Publish with GitHub Pages
+Requires Node.js 22 or newer.
 
-1. Create a GitHub repository and add these files.
-2. Push the repository to GitHub.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Choose the `main` branch and `/ (root)`, then save.
+```bash
+npm ci
+npm run dev
+```
 
-The site will be available at `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`.
+Because this repository deploys as a GitHub project page, the local route is:
+
+`http://localhost:3000/todd-zhu-portfolio/`
+
+Production validation:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+Pushing `main` triggers `.github/workflows/deploy.yml`, which builds the
+static Next.js export and deploys it to GitHub Pages.
+
+## Credits and license
+
+Built from [PRISM](https://github.com/xyjoey/PRISM), an academic homepage
+template by xyjoey. The upstream MIT license is preserved in `LICENSE`.

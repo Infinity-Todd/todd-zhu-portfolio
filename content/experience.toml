@@ -1,0 +1,32 @@
+type = "card"
+title = "Experience"
+description = "Research, teaching, and education."
+
+[[items]]
+title = "Autonomous Systems Research Intern"
+subtitle = "State Key Laboratory of AI Unmanned Systems, Tongji University"
+date = "Jun–Sep 2025"
+content = """
+- Calibrated an optical motion-capture system and collected humanoid motion data.
+- Processed and synchronized trajectories for imitation-learning datasets.
+- Integrated retargeted motion into NVIDIA Isaac Sim and tuned simulation controllers.
+"""
+tags = ["Research", "Robotics", "Shanghai"]
+
+[[items]]
+title = "MATLAB Tutor — MATH 18: Linear Algebra"
+subtitle = "University of California, San Diego"
+date = "Mar–Jun 2025"
+content = """
+Supported students with linear systems, matrix operations, eigendecomposition, subspaces, orthogonality, and least-squares computation in MATLAB.
+"""
+tags = ["Teaching", "Linear Algebra", "MATLAB"]
+
+[[items]]
+title = "B.S. Data Science & Applied Mathematics"
+subtitle = "University of California, San Diego"
+date = "2024–Present"
+content = """
+GPA: **3.96/4.00**. Relevant coursework includes Data Structures and Algorithms, Linear Algebra, Probability, Machine Learning, and Optimization.
+"""
+tags = ["UCSD", "Data Science", "Applied Mathematics"]
