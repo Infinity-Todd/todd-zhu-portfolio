@@ -1,11 +1,7 @@
-I am a second-year undergraduate at the **University of California, San Diego**, pursuing a double major in **Data Science** and **Applied Mathematics**. I grew up in China and now study in San Diego, where I am learning how different ways of thinking can come together to understand complex problems.
+I am a second-year undergraduate at the **University of California, San Diego**, double majoring in **Data Science** and **Applied Mathematics**. Having grown up in China and now studying in San Diego, I have become comfortable moving between different environments, perspectives, and ways of thinking.
 
-I am drawn to **mathematics** because it reveals structure beneath ideas that initially seem unrelated. I enjoy the clarity of a good argument and the moment when an abstract concept becomes intuitive.
+What interests me most are questions that sit between an elegant idea and a system that actually works. Mathematics gives me a language for finding structure; data lets me test whether that structure survives contact with the real world; and computer science turns it into something I can build, run, and improve. I am especially curious about machine learning and reinforcement learning, where these three perspectives meet.
 
-I am interested in **data science** because data offers a way to test ideas against the real world. It combines statistical reasoning, modeling, and interpretation—and asks not only what patterns exist, but whether they are meaningful.
-
-I enjoy **computer science** because it turns ideas into working systems. Programming gives me a practical language for experimenting, building, and seeing how mathematical and statistical concepts behave beyond the page.
-
-Together, these subjects let me move between theory, evidence, and implementation. I am still exploring where that combination will take me, and I use this site to share what I learn along the way.
+I enjoy learning by following a question further than a class requires—working through the theory, experimenting with code, and paying attention to where my intuition fails. This website is a record of that process: the projects I build, the notes I refine, and the ideas I am still learning how to articulate.
 
 > “The important thing is not to stop questioning.” — Albert Einstein
