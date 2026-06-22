@@ -335,8 +335,8 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                         {item.link && (
                             <a
                                 href={item.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                target={item.link.startsWith('http') ? '_blank' : undefined}
+                                rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                                 className="absolute inset-0 z-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
                                 aria-label={`View ${item.title}`}
                             >
@@ -346,7 +346,11 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                         <div className="flex justify-between items-start mb-2">
                             <h3 className={`${embedded ? "text-lg" : "text-xl"} font-semibold text-primary`}>
                                 {item.title}
-                                {item.link && <span className="ml-2 text-accent text-sm" aria-hidden="true">↗</span>}
+                                {item.link && (
+                                    <span className="ml-2 text-accent text-sm" aria-hidden="true">
+                                        {item.link.startsWith('http') ? '↗' : '→'}
+                                    </span>
+                                )}
                             </h3>
                             {item.date && (
                                 <span className="text-sm text-neutral-500 font-medium bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded">

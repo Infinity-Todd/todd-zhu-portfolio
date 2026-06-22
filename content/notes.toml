@@ -3,10 +3,11 @@ title = "Notes"
 description = "Course notes and study summaries from subjects I am learning. Notes will be added as Markdown or PDF files over time."
 
 [[items]]
-title = "Linear Algebra"
-subtitle = "MATH 18"
-content = "Notes on vector spaces, linear transformations, orthogonality, least squares, eigenvalues, and eigenvectors. **Coming soon.**"
-tags = ["Mathematics", "MATLAB"]
+title = "Introduction to Numerical Linear Algebra"
+subtitle = "MATH 170A"
+link = "/todd-zhu-portfolio/notes/math-170a/"
+content = "Lecture notes covering matrix factorizations, conditioning, least squares, SVD, eigenvalue algorithms, and iterative methods. **26 lectures available.**"
+tags = ["Numerical Linear Algebra", "Mathematics", "MATLAB"]
 
 [[items]]
 title = "Probability"
