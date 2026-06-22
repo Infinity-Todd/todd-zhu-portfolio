@@ -54,6 +54,31 @@ function SnakePreview() {
         { x: 180, y: 144 },
     ];
     const segmentCount = 5;
+    const animationDuration = 7.2;
+    const foodEvents = [
+        {
+            x: 436,
+            y: 184,
+            opacity: [1, 1, 0, 0],
+            scale: [0.9, 1.08, 0.1, 0.1],
+            times: [0, 0.36, 0.39, 1],
+            eatAt: 0.39,
+        },
+        {
+            x: 256,
+            y: 112,
+            opacity: [0, 0, 1, 1, 0, 0],
+            scale: [0.1, 0.1, 0.9, 1.08, 0.1, 0.1],
+            times: [0, 0.43, 0.46, 0.75, 0.78, 1],
+            eatAt: 0.78,
+        },
+    ];
+    const particleDirections = [
+        { x: -18, y: -15 },
+        { x: 18, y: -13 },
+        { x: -16, y: 17 },
+        { x: 17, y: 16 },
+    ];
     const positionsForSegment = (segmentIndex: number) => {
         const positions = Array.from({ length: route.length + 1 }, (_, step) => {
             const routeIndex = (step - segmentIndex + route.length) % route.length;
@@ -89,18 +114,72 @@ function SnakePreview() {
                     </filter>
                 </defs>
 
-                <motion.rect
-                    x="505"
-                    y="124"
-                    width="24"
-                    height="24"
-                    rx="6"
-                    fill="#fbbf24"
-                    filter="url(#snake-glow)"
-                    animate={{ opacity: [0.75, 1, 0.75], scale: [0.9, 1.08, 0.9] }}
-                    transition={{ duration: 1.4, repeat: Infinity }}
-                    style={{ transformOrigin: '517px 136px' }}
-                />
+                {foodEvents.map((food, foodIndex) => (
+                    <g key={foodIndex}>
+                        <motion.rect
+                            x={food.x}
+                            y={food.y}
+                            width="24"
+                            height="24"
+                            rx="6"
+                            fill="#fbbf24"
+                            filter="url(#snake-glow)"
+                            animate={{
+                                opacity: food.opacity,
+                                scale: food.scale,
+                            }}
+                            transition={{
+                                duration: animationDuration,
+                                repeat: Infinity,
+                                ease: 'linear',
+                                times: food.times,
+                            }}
+                            style={{ transformOrigin: `${food.x + 12}px ${food.y + 12}px` }}
+                        />
+
+                        {particleDirections.map((direction, particleIndex) => (
+                            <motion.circle
+                                key={particleIndex}
+                                cx={food.x + 12}
+                                cy={food.y + 12}
+                                r="3"
+                                fill="#fde68a"
+                                animate={{
+                                    x: [0, 0, direction.x, direction.x],
+                                    y: [0, 0, direction.y, direction.y],
+                                    opacity: [0, 0, 1, 0],
+                                }}
+                                transition={{
+                                    duration: animationDuration,
+                                    repeat: Infinity,
+                                    ease: 'easeOut',
+                                    times: [0, food.eatAt - 0.01, food.eatAt, food.eatAt + 0.09],
+                                }}
+                            />
+                        ))}
+
+                        <motion.text
+                            x={food.x + 12}
+                            y={food.y - 4}
+                            textAnchor="middle"
+                            fill="#fde68a"
+                            fontSize="16"
+                            fontWeight="700"
+                            animate={{
+                                y: [food.y - 4, food.y - 4, food.y - 24, food.y - 30],
+                                opacity: [0, 0, 1, 0],
+                            }}
+                            transition={{
+                                duration: animationDuration,
+                                repeat: Infinity,
+                                ease: 'easeOut',
+                                times: [0, food.eatAt - 0.01, food.eatAt, food.eatAt + 0.12],
+                            }}
+                        >
+                            +1
+                        </motion.text>
+                    </g>
+                ))}
 
                 {Array.from({ length: segmentCount }, (_, index) => {
                     const positions = positionsForSegment(index);
@@ -112,7 +191,7 @@ function SnakePreview() {
                             initial={{ x: positions.x[0], y: positions.y[0] }}
                             animate={{ x: positions.x, y: positions.y }}
                             transition={{
-                                duration: 7.2,
+                                duration: animationDuration,
                                 repeat: Infinity,
                                 ease: 'linear',
                             }}
