@@ -22,9 +22,13 @@ export interface CardItem {
     tags?: string[];
     link?: string;
     image?: string;
+    video?: string;
+    preview?: 'snake';
+    media_alt?: string;
 }
 
 export interface CardPageConfig extends BasePageConfig {
     type: 'card';
+    variant?: 'default' | 'media';
     items: CardItem[];
 }

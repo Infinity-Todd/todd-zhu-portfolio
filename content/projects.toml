@@ -1,12 +1,15 @@
 type = "card"
+variant = "media"
 title = "Projects"
-description = "Selected reinforcement-learning projects. Click a card to view its GitHub repository."
+description = "Selected reinforcement-learning projects. Hover to explore and click a card to view its GitHub repository."
 
 [[items]]
 title = "Footstep-Guided Humanoid Obstacle Avoidance"
 subtitle = "PPO (Actor-Critic), PyTorch, NVIDIA Isaac Sim"
 date = "2025–Present"
 link = "https://github.com/Infinity-Todd/Footstep-Guided-Humanoid-Obstacle-Avoidance"
+video = "/projects/humanoid-slalom.mp4"
+media_alt = "Humanoid robot navigating a slalom obstacle course"
 content = """
 Implemented actor and critic networks for continuous humanoid control with footstep-conditioned observations. Built the PPO training pipeline, including rollout collection, advantage and value targets, entropy-regularized losses, and stability logging. Evaluated success, collision, and fall metrics in closed-loop simulation.
 """
@@ -17,6 +20,8 @@ title = "Snake RL"
 subtitle = "PPO, Stable-Baselines3, Gym Environment"
 date = "2025"
 link = "https://github.com/Infinity-Todd/Snake-RL"
+preview = "snake"
+media_alt = "Animated preview of a reinforcement-learning agent playing Snake"
 content = """
 Built a reinforcement-learning agent that learns to play the classic Snake game using Proximal Policy Optimization. The project includes a custom environment, training and evaluation scripts, configurable experiments, and saved models.
 """
