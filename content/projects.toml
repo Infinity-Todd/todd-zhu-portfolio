@@ -1,30 +1,23 @@
 type = "card"
 title = "Projects"
-description = "Selected technical projects. Code links will be added as the repositories are documented and cleaned."
+description = "Selected reinforcement-learning projects. Click a card to view its GitHub repository."
 
 [[items]]
 title = "Footstep-Guided Humanoid Obstacle Avoidance"
 subtitle = "PPO (Actor-Critic), PyTorch, NVIDIA Isaac Sim"
 date = "2025–Present"
+link = "https://github.com/Infinity-Todd/Footstep-Guided-Humanoid-Obstacle-Avoidance"
 content = """
 Implemented actor and critic networks for continuous humanoid control with footstep-conditioned observations. Built the PPO training pipeline, including rollout collection, advantage and value targets, entropy-regularized losses, and stability logging. Evaluated success, collision, and fall metrics in closed-loop simulation.
 """
 tags = ["Reinforcement Learning", "PyTorch", "PPO", "Embodied AI"]
 
 [[items]]
-title = "Humanoid Motion Retargeting Pipeline"
-subtitle = "Motion Capture to Simulation"
+title = "Snake RL"
+subtitle = "PPO, Stable-Baselines3, Gym Environment"
 date = "2025"
+link = "https://github.com/Infinity-Todd/Snake-RL"
 content = """
-Created joint-mapping rules across degrees of freedom, joint limits, and coordinate frames. Added trajectory filtering, gap filling, timestamp synchronization, and replay-based validation for imitation-learning datasets.
+Built a reinforcement-learning agent that learns to play the classic Snake game using Proximal Policy Optimization. The project includes a custom environment, training and evaluation scripts, configurable experiments, and saved models.
 """
-tags = ["Robotics", "Data Pipeline", "Isaac Sim", "Python"]
-
-[[items]]
-title = "Primal-Dual Imaging Solver"
-subtitle = "Variational Methods for Imaging"
-date = "2024–2025"
-content = """
-Implemented optimization routines for total-variation denoising and segmentation, then compared reconstruction behavior across regularization choices and numerical solvers.
-"""
-tags = ["CVXPY", "NumPy", "Optimization", "Computer Vision"]
+tags = ["Reinforcement Learning", "Stable-Baselines3", "PPO", "Python"]

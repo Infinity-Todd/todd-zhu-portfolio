@@ -13,11 +13,13 @@ The site is configuration-driven:
 - `content/bio.md` — homepage biography
 - `content/research.toml` — research cards
 - `content/projects.toml` — project cards
+- `content/notes.toml` — course note cards
 - `content/experience.toml` — research, teaching, and education
 - `content/cv.md` — web CV
 - `content/publications.bib` — future BibTeX publication records
 - `public/bio.jpg` — profile image
 - `public/resume.pdf` — downloadable résumé
+- `public/notes/` — uploaded Markdown/PDF course notes
 
 ## Local development
 

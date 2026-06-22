@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from '@heroicons/react/24/solid';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
-import { Github, Linkedin, Pin } from 'lucide-react';
+import { Github, Instagram, Linkedin, Pin } from 'lucide-react';
 import type { SiteConfig } from '@/lib/config';
 import { useMessages } from '@/lib/i18n/useMessages';
 
@@ -301,6 +301,24 @@ export default function Profile({ author, social, features, researchInterests }:
                         </a>
                     );
                 })}
+                {social.linkedin_icon === 'true' && (
+                    <span
+                        className="p-2 sm:p-2 text-neutral-500/70 cursor-default"
+                        aria-label="LinkedIn profile coming soon"
+                        title="LinkedIn — coming soon"
+                    >
+                        <Linkedin className="h-5 w-5" />
+                    </span>
+                )}
+                {social.instagram_icon === 'true' && (
+                    <span
+                        className="p-2 sm:p-2 text-neutral-500/70 cursor-default"
+                        aria-label="Instagram profile coming soon"
+                        title="Instagram — coming soon"
+                    >
+                        <Instagram className="h-5 w-5" />
+                    </span>
+                )}
             </div>
 
             {/* Research Interests */}

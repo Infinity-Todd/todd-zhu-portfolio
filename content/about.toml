@@ -3,11 +3,11 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Embodied AI",
-  "Reinforcement Learning",
-  "Scientific Computing",
-  "Optimization",
-  "Mathematical Modeling"
+  "Mathematics",
+  "Data Science",
+  "Computer Science",
+  "Machine Learning",
+  "Problem Solving"
 ]
 
 [[sections]]
@@ -15,9 +15,3 @@ id = "about"
 type = "markdown"
 source = "bio.md"
 title = "About Me"
-
-[[sections]]
-id = "news"
-type = "list"
-title = "Recent Milestones"
-source = "news.toml"

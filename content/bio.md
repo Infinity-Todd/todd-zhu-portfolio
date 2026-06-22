@@ -1,11 +1,11 @@
-I am a second-year undergraduate at the **University of California, San Diego**, pursuing a double major in **Data Science** and **Applied Mathematics** with a 3.96/4.00 GPA.
+I am a second-year undergraduate at the **University of California, San Diego**, pursuing a double major in **Data Science** and **Applied Mathematics**. I grew up in China and now study in San Diego, where I am learning how different ways of thinking can come together to understand complex problems.
 
-My interests sit at the intersection of machine learning, mathematical modeling, and autonomous systems. I am especially interested in how mathematical structure can make learning-based systems more reliable, interpretable, and capable in the physical world.
+I am drawn to **mathematics** because it reveals structure beneath ideas that initially seem unrelated. I enjoy the clarity of a good argument and the moment when an abstract concept becomes intuitive.
 
-During my research internship at the **State Key Laboratory of AI Unmanned Systems, Tongji University**, I worked with humanoid motion-capture data, motion retargeting, and simulation in NVIDIA Isaac Sim. I am currently developing a footstep-guided humanoid obstacle-avoidance policy using PPO and PyTorch.
+I am interested in **data science** because data offers a way to test ideas against the real world. It combines statistical reasoning, modeling, and interpretation—and asks not only what patterns exist, but whether they are meaningful.
 
-Beyond robotics, I have studied variational methods for image denoising and segmentation and built queueing and revenue models for airport taxi decisions. At UC San Diego, I also served as a MATLAB tutor for MATH 18, helping students connect linear algebra theory with computation.
+I enjoy **computer science** because it turns ideas into working systems. Programming gives me a practical language for experimenting, building, and seeing how mathematical and statistical concepts behave beyond the page.
 
-I use this site to document research, projects, technical notes, and questions that I am still learning how to answer.
+Together, these subjects let me move between theory, evidence, and implementation. I am still exploring where that combination will take me, and I use this site to share what I learn along the way.
 
 > “The important thing is not to stop questioning.” — Albert Einstein

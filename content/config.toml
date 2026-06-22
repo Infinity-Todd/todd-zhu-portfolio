@@ -2,7 +2,7 @@
 title = "Todd Zhu"
 description = "Academic website of Todd Zhu, a Data Science and Applied Mathematics student at UC San Diego."
 favicon = "/todd-zhu-portfolio/favicon.svg"
-last_updated = "June 21, 2026"
+last_updated = "June 22, 2026"
 
 [author]
 name = "Todd Zhu"
@@ -15,6 +15,8 @@ email = "chz111@ucsd.edu"
 location = "La Jolla, California"
 location_details = ["University of California, San Diego", "La Jolla, CA"]
 github = "https://github.com/Infinity-Todd"
+linkedin_icon = "true"
+instagram_icon = "true"
 
 [features]
 enable_likes = true
@@ -49,6 +51,12 @@ title = "Projects"
 type = "page"
 target = "projects"
 href = "/projects"
+
+[[navigation]]
+title = "Notes"
+type = "page"
+target = "notes"
+href = "/notes"
 
 [[navigation]]
 title = "Experience"

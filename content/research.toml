@@ -1,29 +1,4 @@
 type = "card"
 title = "Research"
-description = "My work combines learning, computation, and mathematical modeling across autonomous systems and imaging."
-
-[[items]]
-title = "Autonomous Systems and Humanoid Motion"
-subtitle = "State Key Laboratory of AI Unmanned Systems, Tongji University"
-date = "2025"
-content = """
-Processed optical motion-capture trajectories, aligned joint logs, and retargeted human motion to simulated humanoid skeletons. Integrated reference motions into NVIDIA Isaac Sim and validated them through replay.
-"""
-tags = ["Humanoid Robotics", "Motion Capture", "Isaac Sim", "Python"]
-
-[[items]]
-title = "Variational Image Denoising and Segmentation"
-subtitle = "Mentored Research, Tongji University"
-date = "2024–2025"
-content = """
-Built quadratic and total-variation regularized models for image restoration and segmentation. Derived Euler-Lagrange conditions and implemented gradient-based and primal-dual solvers with reproducible experiments.
-"""
-tags = ["Applied Mathematics", "Optimization", "Image Processing", "Python"]
-
-[[items]]
-title = "Airport Taxi Decision Modeling"
-subtitle = "Independent Research"
-content = """
-Modeled taxi-driver dispatch choices at Shanghai Hongqiao Airport using analytic hierarchy methods, multi-server FCFS queues, unit-time revenue models, MATLAB simulation, and sensitivity analysis.
-"""
-tags = ["Queueing Theory", "Mathematical Modeling", "MATLAB", "Simulation"]
+description = "Research interests and future work will be added here as they develop."
+items = []
