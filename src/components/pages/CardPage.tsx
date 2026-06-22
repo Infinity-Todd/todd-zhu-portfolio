@@ -33,12 +33,38 @@ const markdownComponents = {
 };
 
 function SnakePreview() {
-    const segments = [
-        { left: '24%', top: '56%', delay: 0 },
-        { left: '18%', top: '56%', delay: 0.08 },
-        { left: '12%', top: '56%', delay: 0.16 },
-        { left: '12%', top: '68%', delay: 0.24 },
+    const route = [
+        { x: 180, y: 180 },
+        { x: 216, y: 180 },
+        { x: 252, y: 180 },
+        { x: 288, y: 180 },
+        { x: 324, y: 180 },
+        { x: 360, y: 180 },
+        { x: 396, y: 180 },
+        { x: 432, y: 180 },
+        { x: 432, y: 144 },
+        { x: 432, y: 108 },
+        { x: 396, y: 108 },
+        { x: 360, y: 108 },
+        { x: 324, y: 108 },
+        { x: 288, y: 108 },
+        { x: 252, y: 108 },
+        { x: 216, y: 108 },
+        { x: 180, y: 108 },
+        { x: 180, y: 144 },
     ];
+    const segmentCount = 5;
+    const positionsForSegment = (segmentIndex: number) => {
+        const positions = Array.from({ length: route.length + 1 }, (_, step) => {
+            const routeIndex = (step - segmentIndex + route.length) % route.length;
+            return route[routeIndex];
+        });
+
+        return {
+            x: positions.map(position => position.x),
+            y: positions.map(position => position.y),
+        };
+    };
 
     return (
         <div
@@ -52,39 +78,64 @@ function SnakePreview() {
             aria-label="Animated preview of a reinforcement-learning agent playing Snake"
         >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(74,222,128,0.18),transparent_35%)]" />
-            <motion.div
-                className="absolute left-[72%] top-[32%] h-4 w-4 rounded-sm bg-amber-400 shadow-[0_0_18px_rgba(251,191,36,0.8)]"
-                animate={{ scale: [1, 1.25, 1], rotate: [0, 8, 0] }}
-                transition={{ duration: 1.4, repeat: Infinity }}
-            />
-            {segments.map((segment, index) => (
-                <motion.div
-                    key={index}
-                    className={`absolute h-6 w-6 rounded-md border border-emerald-300/60 ${
-                        index === 0
-                            ? 'bg-emerald-300 shadow-[0_0_22px_rgba(110,231,183,0.7)]'
-                            : 'bg-emerald-500'
-                    }`}
-                    style={{ left: segment.left, top: segment.top }}
-                    animate={{
-                        x: [0, 72, 144, 216, 216, 144, 72, 0],
-                        y: [0, 0, 0, 0, -64, -64, -64, 0],
-                    }}
-                    transition={{
-                        duration: 5,
-                        delay: segment.delay,
-                        repeat: Infinity,
-                        ease: 'linear',
-                    }}
-                >
-                    {index === 0 && (
-                        <>
-                            <span className="absolute left-1 top-1 h-1.5 w-1.5 rounded-full bg-[#071a16]" />
-                            <span className="absolute right-1 top-1 h-1.5 w-1.5 rounded-full bg-[#071a16]" />
-                        </>
-                    )}
-                </motion.div>
-            ))}
+            <svg className="absolute inset-0 h-full w-full" viewBox="0 0 640 360" aria-hidden="true">
+                <defs>
+                    <filter id="snake-glow" x="-100%" y="-100%" width="300%" height="300%">
+                        <feGaussianBlur stdDeviation="7" result="blur" />
+                        <feMerge>
+                            <feMergeNode in="blur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+
+                <motion.rect
+                    x="505"
+                    y="124"
+                    width="24"
+                    height="24"
+                    rx="6"
+                    fill="#fbbf24"
+                    filter="url(#snake-glow)"
+                    animate={{ opacity: [0.75, 1, 0.75], scale: [0.9, 1.08, 0.9] }}
+                    transition={{ duration: 1.4, repeat: Infinity }}
+                    style={{ transformOrigin: '517px 136px' }}
+                />
+
+                {Array.from({ length: segmentCount }, (_, index) => {
+                    const positions = positionsForSegment(index);
+                    const isHead = index === 0;
+
+                    return (
+                        <motion.g
+                            key={index}
+                            initial={{ x: positions.x[0], y: positions.y[0] }}
+                            animate={{ x: positions.x, y: positions.y }}
+                            transition={{
+                                duration: 7.2,
+                                repeat: Infinity,
+                                ease: 'linear',
+                            }}
+                        >
+                            <rect
+                                width="32"
+                                height="32"
+                                rx="8"
+                                fill={isHead ? '#6ee7b7' : index < 3 ? '#10b981' : '#059669'}
+                                stroke={isHead ? '#a7f3d0' : '#34d399'}
+                                strokeWidth="2"
+                                filter={isHead ? 'url(#snake-glow)' : undefined}
+                            />
+                            {isHead && (
+                                <>
+                                    <circle cx="22" cy="10" r="3" fill="#071a16" />
+                                    <circle cx="22" cy="22" r="3" fill="#071a16" />
+                                </>
+                            )}
+                        </motion.g>
+                    );
+                })}
+            </svg>
             <div className="absolute bottom-4 left-4 rounded-full border border-emerald-300/20 bg-black/35 px-3 py-1 text-xs font-medium tracking-wide text-emerald-100 backdrop-blur-sm">
                 PPO agent
             </div>
