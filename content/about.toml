@@ -7,7 +7,7 @@ research_interests = [
   "Data Science",
   "Computer Science",
   "Machine Learning",
-  "Problem Solving"
+  "Reinforcement Learning"
 ]
 
 [[sections]]
@@ -15,3 +15,9 @@ id = "about"
 type = "markdown"
 source = "bio.md"
 title = "About Me"
+
+[[sections]]
+id = "news"
+type = "list"
+title = "Recent Milestones"
+source = "news.toml"
